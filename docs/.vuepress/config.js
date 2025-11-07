@@ -34,15 +34,13 @@ export default defineUserConfig({
       '/get-started/': [
         {
           text: '快速开始',
-          children: ['auto'
-          ]
+          children: 'auto'
         }
       ],
       '/docs/': [
         {
           text: '文档汇聚',
-          children: ['auto'
-          ]
+          children: 'auto'
         }
       ]
     },

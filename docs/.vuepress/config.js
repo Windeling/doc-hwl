@@ -34,13 +34,21 @@ export default defineUserConfig({
       '/get-started/': [
         {
           text: '快速开始',
-          children: 'auto'
+          children: [
+            '/get-started/README.md',
+            '/get-started/installation.md',
+            '/get-started/configuration.md'
+          ]
         }
       ],
       '/docs/': [
         {
           text: '文档汇聚',
-          children: 'auto'
+          children: [
+            '/get-started/README.md',
+            '/get-started/installation.md',
+            '/get-started/configuration.md'
+          ]
         }
       ]
     },

@@ -65,7 +65,7 @@ export default defineUserConfig({
     editLinkText: '在 GitHub 上编辑此页',
     
     // 仓库配置
-    repo: 'Windeling/doc-hwl',
+    repo: 'Windeling/doc-hwl/docs',
     repoLabel: 'GitHub',
     
     // 贡献者

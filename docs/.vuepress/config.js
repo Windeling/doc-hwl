@@ -13,7 +13,7 @@ export default defineUserConfig({
     // 网站logo
     logo: 'https://vuejs.press/images/hero.png',
     
-    // 导航栏
+    // 导航
     navbar: [
       {
         text: '首页',
@@ -25,10 +25,10 @@ export default defineUserConfig({
       },
       {
         text: '摄影风光',
-        items: [
+        children: [
           {
             text: '风光摄影',
-            items: [
+            children: [
               {
                 text: '山水风光',
                 link: '/photo/landscape/mountain-water/'
@@ -53,9 +53,7 @@ export default defineUserConfig({
         {
           text: '快速开始',
           children: [
-            '/get-started/README.md',
-            '/get-started/installation.md',
-            '/get-started/configuration.md'
+            '/get-started/README.md'
           ]
         }
       ],

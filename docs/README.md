@@ -1,10 +1,9 @@
 ---
-home: true
-title: 主页
+title: 快速了解
 heroImage: https://vuejs.press/images/hero.png
 actions:
   - text: 快速开始
-    link: /get-started/
+    link: /get-started.html
     type: primary
 
   - text: 详细了解
@@ -18,8 +17,8 @@ features:
     details: 查阅知识时候应当迅速，采用VuePress架构，极速加载。
   - title: 说明
     details: 对Windeling間其他项目的说明也会在这里。
-  - title: 生活
-    details: 有时候一些生活记录也在这里
+  - title: Themes
+    details: Providing a default theme out of the box. You can also choose a community theme or create your own one.
   - title: Plugins
     details: Flexible plugin API, allowing plugins to provide lots of plug-and-play features for your site.
   - title: Bundlers

@@ -1,5 +1,5 @@
 ---
-title: 快速了解
+title: Home
 heroImage: https://vuejs.press/images/hero.png
 actions:
   - text: 快速开始

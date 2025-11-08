@@ -1,7 +1,6 @@
 ---
 title: 各类文档指南
-description: 专为各类设计的文档平台
-home: true
+description: 各类研究与计划的使用指南和开发文档
 heroImage: https://vuejs.press/images/hero.png
 actions:
   - text: 综合文档

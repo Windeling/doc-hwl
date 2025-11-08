@@ -15,5 +15,6 @@
     "@vuepress/bundler-vite": "2.0.0-rc.26",
     "vuepress": "2.0.0-rc.26",
     "vuepress-theme-hope": "^2.0.0-rc.98"
+    "@vuepress/plugin-slimsearch": "2.0.0-rc.26"
   }
 }

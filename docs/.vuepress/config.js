@@ -58,7 +58,7 @@ export default defineUserConfig({
       "/chat/": "structure",
 
       // 2. 文档说明
-      "/doc/": "structure",
+      "/docs/": "structure",
 
       // 3. 学习笔记
       "/study/": "structure",

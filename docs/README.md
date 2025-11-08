@@ -4,6 +4,9 @@ title: 快速了解
 =======
 home: true
 title: 首页
+<<<<<<< HEAD
+>>>>>>> parent of 7509905 (Revert "Update README.md")
+=======
 >>>>>>> parent of 7509905 (Revert "Update README.md")
 heroImage: https://vuejs.press/images/hero.png
 actions:

@@ -136,10 +136,11 @@ export default defineUserConfig({
         dark: "auto",
         reaction: true,
         comment: true,
+        pageview: true,
       },
 
       photoSwipe: {
-        selector: ".theme-default-content :not(a) > img:not(.no-zoom)",
+        selector: "[vp-content] :not(a) > img:not([no-view])",
         delay: 300,
         download: true,
         copyToClipboard: true,
@@ -183,7 +184,11 @@ export default defineUserConfig({
           image: "https://blog-ground.oss-cn-guangzhou.aliyuncs.com/avatar.jpg",
         },
       },
-
+      readingTime: {
+      wordPerMinute: 300,  // 中文每分钟300字
+      // 访问量开关（默认关）
+      pageViews: true,     // ← 关键！开访问量
+    },
       notice: [
         {
           path: "/",

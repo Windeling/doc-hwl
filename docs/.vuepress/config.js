@@ -70,6 +70,14 @@ export default defineUserConfig({
       "/": "structure",
     },
 
+    headerDepth: 3,             // 显示到 H3（默认 2）
+
+    // 可选：显示图标
+    sidebarIcon: true,
+
+    // 可选：默认展开所有标题（推荐关闭，提升体验）
+    // sidebarCollapsed: false,
+
     // ----- 其它功能（全部保留你原来的设置） -----
     // 颜色模式
     darkmode: "switch",           // 自动 / 手动切换

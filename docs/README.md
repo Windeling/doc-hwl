@@ -25,16 +25,16 @@ actions:
     link: /study/
 
 highlights:
-  - header: 易于安装
+  - header: 易于查找
     image: /assets/image/box.svg
     bgImage: https://theme-hope-assets.vuejs.press/bg/3-light.svg
     bgImageDark: https://theme-hope-assets.vuejs.press/bg/3-dark.svg
     highlights:
-      - title: 运行 <code>pnpm create vuepress-theme-hope hope-project</code> 以创建一个新的主题项目。
-      - title: 在已有项目根目录下运行 <code>pnpm create vuepress-theme-hope add .</code> 以在项目中添加主题。
+      - title: 基于 Vuepress 2.0 架构，快速查找，高效部署。
+      - title: 通过 Vercel 和 Alibaba Cloud 协同部署，极速打开。
 
-  - header: 在 Markdown 中添加你想要的内容
-    description: 我们扩展了标准的 CommonMark 规范，为你添加了成吨功能。
+  - header: 在新文档中添加丰富的插件
+    description: 采用扩展标准的 CommonMark 规范，为查找文档添加大量功能。
     image: /assets/image/markdown.svg
     bgImage: https://theme-hope-assets.vuejs.press/bg/2-light.svg
     bgImageDark: https://theme-hope-assets.vuejs.press/bg/2-dark.svg
@@ -92,9 +92,9 @@ highlights:
         details: 标记并高亮内容
         link: ./guide/markdown/stylize/mark.html
 
-      - title: 剧透
+      - title: 防剧透
         icon: eraser
-        details: 添加剧透标记支持
+        details: 添加防剧透标记支持
         link: ./guide/markdown/stylize/spoiler.html
 
       - title: 任务列表
@@ -112,16 +112,6 @@ highlights:
         details: 在 Markdown 中轻松插入组件
         link: ./guide/component/grammar.html
 
-      - title: 组件
-        icon: puzzle-piece
-        details: 开箱即用的常用组件
-        link: ./guide/component/built-in.html
-
-      - title: Chart.js 支持
-        icon: chart-simple
-        details: 在 Markdown 中展示 Chart.js 图表
-        link: ./guide/markdown/chart/chartjs.html
-
       - title: 流程图支持
         icon: route
         details: 在 Markdown 中直接写出流程图
@@ -132,53 +122,15 @@ highlights:
         details: 在 Markdown 中添加 Mermaid 图例
         link: ./guide/markdown/chart/mermaid.html
 
-      - title: Plantuml 支持
-        icon: diagram-project
-        details: 在 Markdown 中添加 Plant UML 图表
-        link: ./guide/markdown/chart/plantuml.html
-
-      - title: Tex 支持
-        icon: square-root-variable
-        details: Markdown 现在也可以支持 Tex 语法以显示公式
-        link: ./guide/markdown/grammar/math.html
-
-      - title: 导入文件支持
-        icon: b:markdown
-        details: 将你的文档分段，并在 Markdown 中导入
-        link: ./guide/markdown/content/include.html
-
-      - title: 交互演示支持
-        icon: code
-        details: 你可以在 Markdown 中添加交互演示
-        link: ./guide/markdown/code/playground.html
-
-      - title: Kotlin 交互演示支持
-        icon: b:kickstarter
-        details: 响应式的 Kotlin 演示
-        link: ./guide/markdown/code/kotlin-playground.html
-
-      - title: Vue 交互演示支持
-        icon: b:vuejs
-        details: 在交互演示中展示 Vue 组件
-        link: ./guide/markdown/code/vue-playground.html
-
-      - title: Sandpack 交互演示支持
-        icon: code
-        details: Sandpack 驱动的实时的编码环境
-        link: ./guide/markdown/code/sandpack.html
-
       - title: 代码案例支持
         icon: laptop-code
-        details: 你可以很方便的插入代码案例
+        details: 方便插入的代码案例
         link: ./guide/markdown/code/demo.html
 
-      - title: 幻灯片支持
-        icon: person-chalkboard
-        details: 通过 Reveal.js 在 Markdown 中插入幻灯片
-        link: ./guide/markdown/content/revealjs.html
+      
 
-  - header: 可定制的页面
-    description: 完整无障碍支持的可定制外观
+  - header: 高度定制的页面
+    description: 完整支持的可定制外观
     image: /assets/image/ui.svg
     bgImage: https://theme-hope-assets.vuejs.press/bg/9-light.svg
     bgImageDark: https://theme-hope-assets.vuejs.press/bg/9-dark.svg
@@ -214,11 +166,6 @@ highlights:
         details: 从文档标题或文件结构中自动生成侧边栏
         link: ./guide/layout/sidebar.html
 
-      - title: 幻灯片页面
-        icon: person-chalkboard
-        details: 添加幻灯片页面以显示你喜欢的内容
-        link: ./guide/layout/slides.html
-
       - title: 布局增强
         icon: object-group
         details: 添加路径导航、页脚、改进的导航栏、改进的页面导航等。
@@ -236,22 +183,22 @@ highlights:
     features:
       - title: 目录页面
         icon: network-wired
-        details: 自动生成目录页以及开箱即用的目录组件
+        details: 自动生成目录页以及方便易用的目录组件
         link: ./guide/feature/catalog.html
 
       - title: 浏览量与评论
         icon: comment-dots
-        details: 配合 4 个评论服务开启阅读量统计与评论支持
+        details: 配合 Waline 评论服务开启阅读量统计与评论支持
         link: ./guide/feature/comment.html
 
       - title: 文章信息
         icon: circle-info
-        details: 为你的文章添加作者、写作日期、预计阅读时间、字数统计等信息
+        details: 文章具有作者、写作日期、预计阅读时间、字数统计等信息
         link: ./guide/feature/page-info.html
 
       - title: 文章加密
         icon: lock
-        details: 你可以为你的特定页面或特定目录进行加密，以便陌生人不能随意访问它们
+        details: 为特定页面或特定目录进行加密，使得未授权用户不能随意访问它们
         link: ./guide/feature/encrypt.html
 
       - title: 搜索支持
@@ -266,7 +213,7 @@ highlights:
 
       - title: 图片预览
         icon: image
-        details: 像相册一样允许你浏览、缩放并分享你的页面图片
+        details: 像相册一样允许你浏览、缩放并分享页面图片
         link: ./guide/feature/photo-swipe.html
 
   - header: 博客
@@ -275,9 +222,9 @@ highlights:
     bgImage: https://theme-hope-assets.vuejs.press/bg/5-light.svg
     bgImageDark: https://theme-hope-assets.vuejs.press/bg/5-dark.svg
     highlights:
-      - title: 博客功能
+      - title: 文档分类
         icon: blog
-        details: 通过文章的日期、标签和分类展示文章
+        details: 通过文章的日期、标签和分类归类文档
         link: ./guide/blog/intro.html
 
       - title: 博客主页
@@ -285,7 +232,7 @@ highlights:
         details: 全新博客主页
         link: ./guide/blog/home.html
 
-      - title: 博主信息
+      - title: 个人信息
         icon: circle-info
         details: 自定义名称、头像、座右铭和社交媒体链接
         link: ./guide/blog/blogger.html
@@ -303,22 +250,22 @@ highlights:
     highlights:
       - title: SEO 增强
         icon: dumbbell
-        details: 将最终生成的网页针对搜索引擎进行优化。
+        details: 最终生成的网页将针对搜索引擎进行优化
         link: ./guide/advanced/seo.html
 
       - title: Sitemap
         icon: sitemap
-        details: 自动为你的网站生成 Sitemap
+        details: 自动生成 Sitemap
         link: ./guide/advanced/sitemap.html
 
       - title: Feed 支持
         icon: rss
-        details: 生成你的 Feed，并通知你的用户订阅它
+        details: 生成多重 Feed，以便用户订阅
         link: ./guide/advanced/feed.html
 
       - title: PWA 支持
         icon: mobile-screen
-        details: 让你的网站更像一个 APP
+        details: 让 Windelingの間 文档 更像一个 APP
         link: ./guide/advanced/pwa.html
 
 copyright: false

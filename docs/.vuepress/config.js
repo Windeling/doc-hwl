@@ -116,7 +116,7 @@ export default defineUserConfig({
       // 表格
       table: true,
 
-      spoiler: true
+      spoiler: true,
      
       // 图片相关
       figure: true,

@@ -117,7 +117,7 @@ console.log('JS 代码')
 点我展开隐藏内容。
 :::
 
-!! 黄文林其实（markdown-ext自定义）。!!
+!! 黄文林其实（markdown-ext自定义 !!
 
 ## 6. 数学公式（markdown-math）
 行内：Euler $e^{i\pi} + 1 = 0$

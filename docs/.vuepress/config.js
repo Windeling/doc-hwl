@@ -55,16 +55,16 @@ export default defineUserConfig({
     // 所有目录都使用文件结构自动生成，新增文件即自动出现
     sidebar: {
       // 1. 拾枝杂谈
-      "/chat/": "structure",
+      "/chat/": "header",
 
       // 2. 文档说明
-      "/docs/": "structure",
+      "/docs/": "header",
 
       // 3. 学习笔记
-      "/study/": "structure",
+      "/study/": "header",
 
       // 4. 摄影风光（包括所有子目录）
-      "/photo/": "structure",
+      "/photo/": "header",
 
       // 5. 其它未匹配路径（首页、根目录等）使用根结构
       "/": "structure",

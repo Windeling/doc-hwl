@@ -45,7 +45,7 @@ export default defineUserConfig({
       },
     ],
 
-    // 关键：sidebar 是数组！
+    // ==================== 侧边栏：对象格式 ====================
     sidebar: [
       {
         link: "/",
@@ -54,13 +54,31 @@ export default defineUserConfig({
         collapsed: true,
         children: "structure",
       },
-      { link: "/chat/", children: "headers" },
-      { link: "/doc/", children: "headers" },
-      { link: "/study/", children: "headers" },
-      { link: "/photo/", children: "headers" },
+      {
+        link: "/chat/",
+        headerDepth: 3,
+        children: "header",
+      },
+      {
+        link: "/doc/",
+        headerDepth: 3,
+        children: "header",
+      },
+      {
+        link: "/study/",
+        headerDepth: 3,
+        children: "header",
+      },
+      {
+        link: "/photo/",
+        headerDepth: 3,
+        children: "header",
+      },
     ],
 
-    headerDepth: 3,
+    // 全局 headerDepth（可选，覆盖局部）
+    // headerDepth: 3,
+
     sidebarIcon: true,
 
     markdown: {

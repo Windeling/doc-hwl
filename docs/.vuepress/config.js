@@ -45,25 +45,24 @@ export default defineUserConfig({
       },
     ],
 
-    // ==================== 侧边栏：数组格式 ====================
+    // ==================== 侧边栏：正确格式 ====================
     sidebar: [
       {
-        path: "/",
+        link: "/",
         text: "Windeling 文档",
         collapsible: true,
         collapsed: true,
         children: "structure",
       },
-      { path: "/chat/", children: "headers" },
-      { path: "/doc/", children: "headers" },
-      { path: "/study/", children: "headers" },
-      { path: "/photo/", children: "headers" },
+      { link: "/chat/", children: "headers" },
+      { link: "/doc/", children: "headers" },
+      { link: "/study/", children: "headers" },
+      { link: "/photo/", children: "headers" },
     ],
 
     headerDepth: 3,
     sidebarIcon: true,
 
-    // ==================== Markdown 增强 ====================
     markdown: {
       footnote: true,
       tasklist: true,
@@ -71,7 +70,6 @@ export default defineUserConfig({
       sub: true,
     },
 
-    // ==================== 插件 ====================
     plugins: {
       copyCode: { showInMobile: true },
       slimsearch: {
@@ -80,7 +78,6 @@ export default defineUserConfig({
       },
     },
 
-    // ==================== 其它 ====================
     darkmode: "switch",
     lastUpdated: true,
     lastUpdatedText: "最后更新",

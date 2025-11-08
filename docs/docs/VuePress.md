@@ -117,7 +117,7 @@ console.log('JS 代码')
 点我展开隐藏内容。
 :::
 
-!! 黄文林其实（markdown-ext自定义 !!
+自定义 !!黄文林其实markdown-ext自定义!!
 
 ## 6. 数学公式（markdown-math）
 行内：Euler $e^{i\pi} + 1 = 0$
@@ -163,7 +163,7 @@ function App() {
 
 
 ## 8. 代码选项卡（Hope 自带 code-tabs）
-::: code-tabs
+::: tabs
 
 @tab pnpm
 ```bash
@@ -215,7 +215,15 @@ console.log("4 ==")  // 黄色高亮
 
 （shiki带行号、diff红绿、单词高亮、TS悬浮）
 
+### 功能描述
+这里描述功能的具体作用，例如这是一个计算加法的函数。
 
+::: details 案例
+#### 输入
+```javascript
+function add(a, b) {
+  return a + b;
+}
 
 
 这些就是你能直接在md里玩的全部花样了

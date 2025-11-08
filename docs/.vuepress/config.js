@@ -242,6 +242,16 @@ export default defineUserConfig({
       copyCode: { showInMobile: true },
       search: false,
 
+      mdEnhance: {
+      tabs: true,
+        // This enables the ::: tab syntax
+        gfm: true,
+  tasklist: true,
+  footnote: true,
+  sup: true,
+  sub: true,
+  container: true,
+    },
       // 评论
       comment: {
         provider: 'Waline',

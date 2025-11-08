@@ -3,17 +3,6 @@ import { hopeTheme } from "vuepress-theme-hope";
 import { defineUserConfig } from "vuepress";
 import { viteBundler } from "@vuepress/bundler-vite";
 import { appendDatePlugin } from '@vuepress/plugin-append-date';
-import { slimsearchPlugin } from '@vuepress/plugin-slimsearch';
-import { copyrightPlugin } from '@vuepress/plugin-copyright';
-import { noticePlugin } from '@vuepress/plugin-notice';
-import { markdownMathPlugin } from '@vuepress/plugin-markdown-math';
-import { markdownImagePlugin } from '@vuepress/plugin-markdown-image';
-import { feedPlugin } from '@vuepress/plugin-feed';
-import { photoSwipePlugin } from '@vuepress/plugin-photo-swipe';
-import { markdownExtPlugin } from '@vuepress/plugin-markdown-ext';
-import { markdownStylizePlugin } from '@vuepress/plugin-markdown-stylize';
-import { shikiPlugin } from '@vuepress/plugin-shiki';
-import { markdownChartPlugin } from '@vuepress/plugin-markdown-chart'
 
 export default defineUserConfig({
   lang: "zh-CN",
@@ -27,156 +16,7 @@ export default defineUserConfig({
     ["meta", { name: "keywords", content: "文档,知识库,黄文林" }],
   ],
 
-  // —— 根 plugins 只留 appendDate —— //
   plugins: [
-    markdownChartPlugin({
-      echarts: true   // 就这一行，ECharts 就活了！
-    }),
-
-    shikiPlugin({
-      // 光暗双主题（Hope 自动切）
-      themes: {
-        light: "github-light",   // 白天清爽
-        dark: "github-dark",     // 夜间护眼
-      },
-
-      // 行号 + 高亮
-      lineNumbers: true,
-      notationDiff: true,
-      notationFocus: true,
-      notationHighlight: true,
-      notationWordHighlight: true,
-
-      // TS 神器：悬浮看类型
-      twoslash: true,
-
-      // 预加载常用语言（加速）
-      preload: ["js", "ts", "vue", "bash", "json", "md", "yaml"],
-    }),
-
-    markdownStylizePlugin({
-      // 自定义规则数组
-      custom: [
-        // 1. *推荐* → 绿底徽章
-        {
-          matcher: '推荐',
-          replacer: ({ tag }) => {
-            if (tag === 'em') {
-              return {
-                tag: 'Badge',
-                attrs: { type: 'tip' },
-                content: '推荐',
-              };
-            }
-          },
-        },
-
-        {
-          matcher: '应当',
-          replacer: ({ tag }) => {
-            if (tag === 'em') {
-              return {
-                tag: 'Badge',
-                attrs: { type: 'tip' },
-                content: '推荐',
-              };
-            }
-          },
-        },
-
-        // 2. *必须* → 红底徽章
-        {
-          matcher: '必须',
-          replacer: ({ tag }) => {
-            if (tag === 'em') {
-              return {
-                tag: 'Badge',
-                attrs: { type: 'danger' },
-                content: '必须',
-              };
-            }
-          },
-        },
-
-        {
-          matcher: '警告',
-          replacer: ({ tag }) => {
-            if (tag === 'em') {
-              return {
-                tag: 'Badge',
-                attrs: { type: 'danger' },
-                content: '必须',
-              };
-            }
-          },
-        },
-
-        {
-          matcher: '注意',
-          replacer: ({ tag }) => {
-            if (tag === 'em') {
-              return {
-                tag: 'Badge',
-                attrs: { type: 'danger' },
-                content: '必须',
-              };
-            }
-          },
-        },
-
-        // 3. n't 结尾的单词 → 红字（比如 *doesn't*）
-        {
-          matcher: /n't$/,
-          replacer: ({ tag, attrs, content }) => {
-            if (tag === 'em') {
-              return {
-                tag: 'span',
-                attrs: { ...attrs, style: 'color: red;' },
-                content,
-              };
-            }
-          },
-        },
-
-        // 4. ==高亮== → 荧光黄
-        {
-          matcher: /==(.+?)==/,
-          replacer: ({ content }) => ({
-            tag: 'mark',
-            attrs: { style: 'background: rgba(255, 211, 17, 1);' },
-            content: content.slice(2, -2), // 去掉 ==
-          }),
-        },
-      ],
-    }),
-    
-    markdownExtPlugin({
-      // GFM 全家桶（自动链接、删节线、任务列表、表格对齐）
-      gfm: true,
-
-      // 脚注：[^1]: 描述
-      footnote: true,
-
-      // 上标 ^text^ 和下标 ~text~
-      sup: true,
-      sub: true,
-
-      // 自动转链接：www.baidu.com → 可点
-      autolink: true,
-
-      // 自定义容器：::: tip ::::
-      container: true,
-
-      // 组件 fence：::: my-comp ::::
-      component: true,
-
-      // 任务列表：[x] 已完成
-      tasklist: true,
-
-      // 表格对齐：:--: 居中
-      table: true,
-    }),
-
     appendDatePlugin({
       enable: true,
       format: "YYYY-MM-DD HH:mm",
@@ -255,33 +95,154 @@ export default defineUserConfig({
     contributors: true,
     contributorsText: "贡献者",
 
-    // —— 所有 markdown 增强写这里 —— //
+    // 在这里配置所有 markdown 增强功能
     markdown: {
-      tasklist: true,
+      // GFM 功能
+      gfm: true,
+      
+      // 任务列表
+      tasklist: {
+        disabled: false,
+        label: true,
+      },
+      
+      // 脚注
       footnote: true,
-      imageLazyload: true,
-
-      // markdown-image 功能全开
+      
+      // 上下标
+      sup: true,
+      sub: true,
+      
+      // 自动链接
+      autolink: true,
+      
+      // 自定义容器
+      container: true,
+      
+      // 组件
+      component: true,
+      
+      // 表格
+      table: true,
+      
+      // 图片相关
       figure: true,
       imgLazyload: true,
       imgMark: true,
       imgSize: true,
       obsidianImgSize: true,
 
+      // 代码块高亮
+      code: {
+        lineNumbers: 10, // 超过10行显示行号
+        highlightLines: true,
+      },
+
       // 数学公式
       math: {
         type: "katex",
         delimiters: "dollars",
-        katex: { strict: false }
-      }
+        katex: { 
+          strict: false,
+          output: 'html',
+        }
+      },
+
+      // 图表
+      chart: true,
+
+      // 标记增强
+      stylize: [
+        {
+          matcher: '推荐',
+          replacer: ({ tag }) => {
+            if (tag === 'em') {
+              return {
+                tag: 'Badge',
+                attrs: { type: 'tip' },
+                content: '推荐',
+              };
+            }
+          },
+        },
+        {
+          matcher: '应当',
+          replacer: ({ tag }) => {
+            if (tag === 'em') {
+              return {
+                tag: 'Badge',
+                attrs: { type: 'tip' },
+                content: '推荐',
+              };
+            }
+          },
+        },
+        {
+          matcher: '必须',
+          replacer: ({ tag }) => {
+            if (tag === 'em') {
+              return {
+                tag: 'Badge',
+                attrs: { type: 'danger' },
+                content: '必须',
+              };
+            }
+          },
+        },
+        {
+          matcher: '警告',
+          replacer: ({ tag }) => {
+            if (tag === 'em') {
+              return {
+                tag: 'Badge',
+                attrs: { type: 'danger' },
+                content: '警告',
+              };
+            }
+          },
+        },
+        {
+          matcher: '注意',
+          replacer: ({ tag }) => {
+            if (tag === 'em') {
+              return {
+                tag: 'Badge',
+                attrs: { type: 'warning' },
+                content: '注意',
+              };
+            }
+          },
+        },
+        {
+          matcher: /n't$/,
+          replacer: ({ tag, attrs, content }) => {
+            if (tag === 'em') {
+              return {
+                tag: 'span',
+                attrs: { ...attrs, style: 'color: red;' },
+                content,
+              };
+            }
+          },
+        },
+        {
+          matcher: /==(.+?)==/,
+          replacer: ({ content }) => ({
+            tag: 'mark',
+            attrs: { style: 'background: rgba(255, 211, 17, 1);' },
+            content: content.slice(2, -2),
+          }),
+        },
+      ],
     },
 
-    // —— 所有插件配置写 theme.plugins —— //
     plugins: {
+      // 搜索
       slimsearch: true,
       copyCode: { showInMobile: true },
-      search: false, // slimsearch 替代
+      search: false,
 
+      // 评论
       comment: {
         provider: 'Waline',
         serverURL: 'https://waline.windeling.com/',
@@ -291,6 +252,7 @@ export default defineUserConfig({
         pageview: true,
       },
 
+      // 图片预览
       photoSwipe: {
         selector: "[vp-content] :not(a) > img:not([no-view])",
         delay: 300,
@@ -306,6 +268,7 @@ export default defineUserConfig({
         preload: [2, 2],
       },
 
+      // 版权信息
       copyright: {
         global: true,
         triggerLength: 80,
@@ -314,18 +277,19 @@ export default defineUserConfig({
         copyright: `本文作者：黄文林\n原文链接：{{ page.link }}\n转载请保留出处，禁止商用！`,
       },
 
+      // 订阅
       feed: {
         rss: true,
         atom: true,
         json: true,
         count: 70,
-        getter: (page) => page.frontmatter.article !== latencies !== false,
+        getter: (page) => page.frontmatter.article !== false,
 
         channel: {
           title: "Windelingの間 · 黄文林的碎碎念",
           description: "摄影风光 + 生活杂谈 + 学习笔记",
           link: "https://space.windeling.com",
-          hostname: "https://space.windeling.com",  // 必须！
+          hostname: "https://space.windeling.com",
           language: "zh-CN",
           copyright: "© 2025 黄文林 | CC BY-NC-SA 4.0",
           author: {
@@ -336,11 +300,14 @@ export default defineUserConfig({
           image: "https://blog-ground.oss-cn-guangzhou.aliyuncs.com/avatar.jpg",
         },
       },
+
+      // 阅读时间
       readingTime: {
-      wordPerMinute: 300,  // 中文每分钟300字
-      // 访问量开关（默认关）
-      pageViews: true,     // ← 关键！开访问量
-    },
+        wordPerMinute: 300,
+        pageViews: true,
+      },
+
+      // 通知
       notice: [
         {
           path: "/",

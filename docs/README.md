@@ -8,7 +8,7 @@ actions:
     type: primary
 
   - text: 详细了解
-    link: https://vuejs.press/guide/introduction.html
+    link: https://blog.windeling.com/
     type: secondary
 
 features:

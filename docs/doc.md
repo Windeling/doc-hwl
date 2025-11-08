@@ -3,6 +3,7 @@ home: true
 title: "Windeling文档"
 description: "总览"
 heroText: "文档聚合"
+heroImage: https://vuejs.press/images/hero.png
 tagline: "各计划研究的使用指南和开发文档"
 actions:
   - text: 快速开始

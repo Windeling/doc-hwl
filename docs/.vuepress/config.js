@@ -260,7 +260,6 @@ export default defineUserConfig({
       tasklist: true,
       footnote: true,
       imageLazyload: true,
-      tabs: true,
 
       // markdown-image 功能全开
       figure: true,
@@ -314,7 +313,6 @@ export default defineUserConfig({
         license: "CC BY-NC-SA 4.0",
         copyright: `本文作者：黄文林\n原文链接：{{ page.link }}\n转载请保留出处，禁止商用！`,
       },
-
 
       feed: {
         rss: true,

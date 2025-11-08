@@ -1,9 +1,9 @@
 ---
 home: true
+title: 主页
 icon: home
-title: Home
-heroText: VuePress Theme Hope
-tagline: A VuePress theme with tons of features✨
+heroText: Windelingの間 文档
+tagline: 属于「黄文林」的知识库、清单和文档
 heroStyle:
   min-height: 600px
 bgImage: https://theme-hope-assets.vuejs.press/bg/6-light.svg
@@ -11,30 +11,30 @@ bgImageDark: https://theme-hope-assets.vuejs.press/bg/6-dark.svg
 bgImageStyle:
   background-attachment: fixed
 actions:
-  - text: Get Started
-    link: ./get-started/
+  - text: 快速了解
+    link: /get-started
     icon: signs-post
     type: primary
 
-  - text: Guide
+  - text: 文档
     icon: lightbulb
-    link: ./guide/
+    link: /doc
 
-  - text: Demos
+  - text: 学习
     icon: star
-    link: ./demo/
+    link: /study/
 
 highlights:
-  - header: Easy to install
+  - header: 易于安装
     image: /assets/image/box.svg
     bgImage: https://theme-hope-assets.vuejs.press/bg/3-light.svg
     bgImageDark: https://theme-hope-assets.vuejs.press/bg/3-dark.svg
     highlights:
-      - title: Run <code>pnpm create vuepress-theme-hope hope-project</code> to create a new project with this theme.
-      - title: Run <code>pnpm create vuepress-theme-hope add .</code> in your project root to create a new project with this theme.
+      - title: 运行 <code>pnpm create vuepress-theme-hope hope-project</code> 以创建一个新的主题项目。
+      - title: 在已有项目根目录下运行 <code>pnpm create vuepress-theme-hope add .</code> 以在项目中添加主题。
 
-  - header: Add things you want in markdown
-    description: We extended the standard commonMark specification and added tons of new features for you.
+  - header: 在 Markdown 中添加你想要的内容
+    description: 我们扩展了标准的 CommonMark 规范，为你添加了成吨功能。
     image: /assets/image/markdown.svg
     bgImage: https://theme-hope-assets.vuejs.press/bg/2-light.svg
     bgImageDark: https://theme-hope-assets.vuejs.press/bg/2-dark.svg
@@ -42,280 +42,285 @@ highlights:
       background-repeat: repeat
       background-size: initial
     features:
-      - title: Links Check
+      - title: 链接检查
         icon: clipboard-check
-        details: Check markdown links
+        details: 检查 Markdown 链接
         link: ./guide/markdown/others.html#link-check
 
-      - title: Hint box
+      - title: 提示容器
         icon: box-archive
-        details: Decorate Markdown content with styles
+        details: 用样式装饰 Markdown 内容
         link: ./guide/markdown/stylize/hint.html
 
-      - title: GFM alerts
+      - title: GFM 警告
         icon: bell
-        details: GFM alert box
+        details: GFM 风格的警告容器
         link: ./guide/markdown/stylize/alert.html
 
-      - title: Tabs
+      - title: 选项卡
         icon: table-columns
-        details: Group similar content with tabs and switch them together
+        details: 使用选项卡对相似内容进行分组
         link: ./guide/markdown/content/tabs.html
 
-      - title: Code Tabs
+      - title: 代码组
         icon: code
-        details: Group similar codes with tabs
+        details: 使用选项卡对相似代码进行分组
         link: ./guide/markdown/code/code-tabs.html
 
-      - title: Custom Align
+      - title: 自定义对齐
         icon: align-center
-        details: Let you decide to align paragraphs in the way you like
+        details: Markdown 中对内容进行自定义对齐
         link: ./guide/markdown/stylize/align.html
 
-      - title: Attrs
+      - title: 自定义属性
         icon: code
-        details: Allow you to add attributes for Markdown content
+        details: 为 Markdown 元素添加属性
         link: ./guide/markdown/stylize/attrs.html
 
-      - title: Superscript and subscript
+      - title: 上下角标
         icon: superscript
-        details: Inserting superscript and subscript
+        details: 轻松在 Markdown 中添加上下角标
         link: ./guide/markdown/stylize/sup-sub.html
 
-      - title: Footnote
+      - title: 脚注
         icon: quote-left
-        details: Your Markdown now support footnotes
+        details: 在内容中插入脚注
         link: ./guide/markdown/content/footnote.html
 
-      - title: Mark
+      - title: 标记
         icon: highlighter
-        details: Mark and highlight contents
+        details: 标记并高亮内容
         link: ./guide/markdown/stylize/mark.html
 
-      - title: Spoiler
+      - title: 剧透
         icon: eraser
-        details: Mark spoiler contents
+        details: 添加剧透标记支持
         link: ./guide/markdown/stylize/spoiler.html
 
-      - title: Tasklist
+      - title: 任务列表
         icon: square-check
-        details: Use tasklist in Markdown
+        details: 轻松插入任务列表
         link: ./guide/markdown/grammar/tasklist.html
 
-      - title: Image syntax
+      - title: 图片语法
         icon: image
-        details: improve syntax to specify size and color scheme
+        details: 使用改进的语法指定图片大小与颜色模式
         link: ./guide/markdown/grammar/image.html
 
-      - title: Component Support
+      - title: 组件支持
         icon: puzzle-piece
-        details: Easily insert components in Markdown
+        details: 在 Markdown 中轻松插入组件
         link: ./guide/component/grammar.html
 
-      - title: Components
+      - title: 组件
         icon: puzzle-piece
-        details: Common components out fo box
+        details: 开箱即用的常用组件
         link: ./guide/component/built-in.html
 
-      - title: Chart Support
+      - title: Chart.js 支持
         icon: chart-simple
-        details: Display charts in Markdown
+        details: 在 Markdown 中展示 Chart.js 图表
         link: ./guide/markdown/chart/chartjs.html
 
-      - title: Flowchart Support
+      - title: 流程图支持
         icon: route
-        details: Create your flowchart in Markdown
+        details: 在 Markdown 中直接写出流程图
         link: ./guide/markdown/chart/flowchart.html
 
-      - title: Mermaid Support
+      - title: Mermaid 支持
         icon: chart-pie
-        details: Add mermaid diagram in Markdown
+        details: 在 Markdown 中添加 Mermaid 图例
         link: ./guide/markdown/chart/mermaid.html
 
-      - title: Plantuml Support
+      - title: Plantuml 支持
         icon: diagram-project
-        details: Add plantuml in Markdown
+        details: 在 Markdown 中添加 Plant UML 图表
         link: ./guide/markdown/chart/plantuml.html
 
-      - title: Tex Support
+      - title: Tex 支持
         icon: square-root-variable
-        details: Markdown now have Tex Support so you can write your formula
+        details: Markdown 现在也可以支持 Tex 语法以显示公式
         link: ./guide/markdown/grammar/math.html
 
-      - title: Include snippet Support
+      - title: 导入文件支持
         icon: b:markdown
-        details: split your docs with different parts and import them in Markdown
+        details: 将你的文档分段，并在 Markdown 中导入
         link: ./guide/markdown/content/include.html
 
-      - title: Playground Support
+      - title: 交互演示支持
         icon: code
-        details: You can add playground in Markdown files
+        details: 你可以在 Markdown 中添加交互演示
         link: ./guide/markdown/code/playground.html
 
-      - title: Kotlin playground Support
+      - title: Kotlin 交互演示支持
         icon: b:kickstarter
-        details: Reactive kotlin playground
+        details: 响应式的 Kotlin 演示
         link: ./guide/markdown/code/kotlin-playground.html
 
-      - title: Vue playground Support
+      - title: Vue 交互演示支持
         icon: b:vuejs
-        details: Show living vue component in playground
+        details: 在交互演示中展示 Vue 组件
         link: ./guide/markdown/code/vue-playground.html
 
-      - title: Sandpack playground Support
+      - title: Sandpack 交互演示支持
         icon: code
-        details: A live coding environment driven by Sandpack.
+        details: Sandpack 驱动的实时的编码环境
         link: ./guide/markdown/code/sandpack.html
 
-      - title: Code Demo Support
+      - title: 代码案例支持
         icon: laptop-code
-        details: You can insert code demo easily
+        details: 你可以很方便的插入代码案例
         link: ./guide/markdown/code/demo.html
 
-      - title: Presentation Support
+      - title: 幻灯片支持
         icon: person-chalkboard
-        details: Insert presentation in Markdown files via Reveal.js
+        details: 通过 Reveal.js 在 Markdown 中插入幻灯片
         link: ./guide/markdown/content/revealjs.html
 
-  - header: Customizable UI
-    description: Customizable outlook with full a11y support.
+  - header: 可定制的页面
+    description: 完整无障碍支持的可定制外观
     image: /assets/image/ui.svg
     bgImage: https://theme-hope-assets.vuejs.press/bg/9-light.svg
     bgImageDark: https://theme-hope-assets.vuejs.press/bg/9-dark.svg
     highlights:
-      - title: Dark Mode
+      - title: 深色模式
         icon: circle-half-stroke
-        details: Switch between light and dark modes freely
+        details: 可以自由切换浅色模式与深色模式
         link: ./guide/interface/darkmode.html
 
-      - title: Customizable Theme Color
+      - title: 主题色切换
         icon: palette
-        details: Set theme color with the brand color and even a picker
+        details: 支持自定义主题色并允许用户在预设的主题颜色之间切换
         link: ./guide/interface/theme-color.html
 
-      - title: More
+      - title: 更多
         icon: ellipsis
-        details: RTL layout, print support, fullscreen button, etc.
+        details: RTL 布局，打印支持，全局按钮等
         link: ./guide/interface/others.html
 
-  - header: Improved layouts
-    description: An awesome responsive layout
+  - header: 布局
+    description: 一个完美的响应式布局。
     image: /assets/image/layout.svg
     bgImage: https://theme-hope-assets.vuejs.press/bg/5-light.svg
     bgImageDark: https://theme-hope-assets.vuejs.press/bg/5-dark.svg
     highlights:
-      - title: Navbar
+      - title: 导航栏
         icon: window-maximize
-        details: Fully customizable navbar with improved mobile support
+        details: 完全可定制的导航栏以及改进的移动端外观
         link: ./guide/layout/navbar.html
 
-      - title: Sidebar
+      - title: 侧边栏
         icon: fas fa-window-maximize fa-rotate-270
-        details: Generate sidebar based on page headings and file structure
+        details: 从文档标题或文件结构中自动生成侧边栏
         link: ./guide/layout/sidebar.html
 
-      - title: Slide Page
+      - title: 幻灯片页面
         icon: person-chalkboard
-        details: Adding slide pages to display things you like
+        details: 添加幻灯片页面以显示你喜欢的内容
         link: ./guide/layout/slides.html
 
-      - title: Other Layout Improvement
+      - title: 布局增强
         icon: object-group
-        details: Improved page nav and new breadcrumb, footer and toc. We also bring you a brand new homepage.
+        details: 添加路径导航、页脚、改进的导航栏、改进的页面导航等。
         link: ./guide/layout/
 
-  - header: New features
+      - title: 更多
+        icon: ellipsis
+        details: RTL 布局，打印支持，全局按钮等
+        link: ./guide/interface/others.html
+
+  - header: 新功能
     image: /assets/image/features.svg
     bgImage: https://theme-hope-assets.vuejs.press/bg/1-light.svg
     bgImageDark: https://theme-hope-assets.vuejs.press/bg/1-dark.svg
     features:
-      - title: Catalog Page
+      - title: 目录页面
         icon: network-wired
-        details: Auto generating catalog page and out of box catalog component
+        details: 自动生成目录页以及开箱即用的目录组件
         link: ./guide/feature/catalog.html
 
-      - title: Pageviews and Comments
+      - title: 浏览量与评论
         icon: comment-dots
-        details: Pageview statistics and comment support with 4 comment service
+        details: 配合 4 个评论服务开启阅读量统计与评论支持
         link: ./guide/feature/comment.html
 
-      - title: Article Information
+      - title: 文章信息
         icon: circle-info
-        details: Add author, writing date, reading time, word count and other information to your article
+        details: 为你的文章添加作者、写作日期、预计阅读时间、字数统计等信息
         link: ./guide/feature/page-info.html
 
-      - title: Article Encryption
+      - title: 文章加密
         icon: lock
-        details: Encrypt you articles based on page links, so that only the one you want could see them
+        details: 你可以为你的特定页面或特定目录进行加密，以便陌生人不能随意访问它们
         link: ./guide/feature/encrypt.html
 
-      - title: Search
+      - title: 搜索支持
         icon: search
-        details: Support docsearch and client search
+        details: 支持 docsearch 和基于客户端的搜索
         link: ./guide/feature/search.html
 
-      - title: Code Block
+      - title: 代码块
         icon: code
-        details: Customize code block themes, line number, highlight lines, copy button, etc.
+        details: 自定义代码块主题、行号、行高亮、复制按钮等
         link: ./guide/markdown/code/fence.html
 
-      - title: Image Preview
+      - title: 图片预览
         icon: image
-        details: Support viewing, zooming, sharing your page images like a gallery
+        details: 像相册一样允许你浏览、缩放并分享你的页面图片
         link: ./guide/feature/photo-swipe.html
 
-  - header: Blogging
-    description: Create personal blog with theme
+  - header: 博客
+    description: 通过主题创建个人博客
     image: /assets/image/blog.svg
     bgImage: https://theme-hope-assets.vuejs.press/bg/5-light.svg
     bgImageDark: https://theme-hope-assets.vuejs.press/bg/5-dark.svg
     highlights:
-      - title: Blog features
+      - title: 博客功能
         icon: blog
-        details: Listing your articles with their dates, tags and categories
+        details: 通过文章的日期、标签和分类展示文章
         link: ./guide/blog/intro.html
 
-      - title: Blog homepage
-        icon: blog
-        details: New blog homepage
+      - title: 博客主页
+        icon: home
+        details: 全新博客主页
         link: ./guide/blog/home.html
 
-      - title: Blogger info
+      - title: 博主信息
         icon: circle-info
-        details: Customize avatar, name, slogan, introduction and social links
+        details: 自定义名称、头像、座右铭和社交媒体链接
         link: ./guide/blog/blogger.html
 
-      - title: Timeline
+      - title: 时间线
         icon: clock
-        details: Read through blog posts in a timeline
+        details: 在时间线中浏览和通读博文
         link: ./guide/blog/timeline.html
 
-  - header: Advanced
-    description: Advanced features to improve site SEO and user experience
+  - header: 高级
+    description: 增强站点与用户体验的高级功能
     image: /assets/image/advanced.svg
     bgImage: https://theme-hope-assets.vuejs.press/bg/4-light.svg
     bgImageDark: https://theme-hope-assets.vuejs.press/bg/4-dark.svg
     highlights:
-      - title: SEO Enhancement
+      - title: SEO 增强
         icon: dumbbell
-        details: Optimize pages for search engines
+        details: 将最终生成的网页针对搜索引擎进行优化。
         link: ./guide/advanced/seo.html
 
       - title: Sitemap
         icon: sitemap
-        details: Generate a Sitemap for your site
+        details: 自动为你的网站生成 Sitemap
         link: ./guide/advanced/sitemap.html
 
-      - title: Feed
+      - title: Feed 支持
         icon: rss
-        details: Generate feed to allow users to subscribe it
+        details: 生成你的 Feed，并通知你的用户订阅它
         link: ./guide/advanced/feed.html
 
-      - title: PWA
+      - title: PWA 支持
         icon: mobile-screen
-        details: Make your site more like an APP
+        details: 让你的网站更像一个 APP
         link: ./guide/advanced/pwa.html
 
 copyright: false
-footer: MIT Licensed | Copyright © 2019-present Mr.Hope
+footer: MIT Licensed | Copyright © 2025 Windeling
 ---

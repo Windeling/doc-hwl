@@ -117,9 +117,7 @@ console.log('JS 代码')
 点我展开隐藏内容。
 :::
 
-!! spoiler 剧透区
-黄文林其实是帅哥（markdown-ext自定义）。
-!!
+!! 黄文林其实（markdown-ext自定义）。!!
 
 ## 6. 数学公式（markdown-math）
 行内：Euler $e^{i\pi} + 1 = 0$

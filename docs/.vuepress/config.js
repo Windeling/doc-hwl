@@ -16,21 +16,15 @@ export default defineUserConfig({
     ["meta", { name: "keywords", content: "文档,知识库,黄文林" }],
   ],
 
-  // 插件：搜索
-  plugins: [
-    searchPlugin({
-      // 搜索配置（可选）
-      maxSuggestions: 10,
-      hotKeys: ["s", "/"],
-    }),
-  ],
+  // 这里 **不再** 使用 @vuepress/plugin-search
+  // plugins: [],   // 如果以后需要其它官方插件再打开
 
   theme: hopeTheme({
     // 作者、logo
     author: "黄文林",
     logo: "https://vuejs.press/images/hero.png",
 
-    // 导航栏（保持你原来的）
+    // 导航栏
     navbar: [
       { text: "首页", link: "/" },
       {
@@ -57,9 +51,9 @@ export default defineUserConfig({
       },
     ],
 
-    // ========= 侧边栏：关键修复 =========
+    // ==================== 侧边栏 ====================
     sidebar: {
-      // 1. 首页：显示文件结构（可折叠）
+      // 首页：可折叠的文件结构
       "/": [
         {
           text: "Windeling 文档",
@@ -69,29 +63,39 @@ export default defineUserConfig({
         },
       ],
 
-      // 2. 所有子目录：显示当前页面的标题目录（H2/H3）
+      // 其它路径：在文章页面显示 H2/H3 标题目录
       "/chat/": "headers",
       "/doc/": "headers",
       "/study/": "headers",
       "/photo/": "headers",
     },
 
-    // 标题层级
     headerDepth: 3,
-
-    // 图标
     sidebarIcon: true,
 
-    // ========= Markdown 增强（新写法）=========
+    // ==================== Markdown 增强 ====================
     markdown: {
-      footnote: true,     // 脚注
-      tasklist: true,     // 任务列表
-      sup: true,          // 上标
-      sub: true,          // 下标
+      footnote: true,
+      tasklist: true,
+      sup: true,
+      sub: true,
       imageLazyload: true,
     },
 
-    // ========= 其他功能 =========
+    // ==================== 插件（内置） ====================
+    plugins: {
+      // 代码复制
+      copyCode: { showInMobile: true },
+
+      // 更强大的全文搜索（searchPro）
+      searchPro: {
+        indexContent: true,     // 索引正文
+        autoSuggestions: true,  // 实时建议
+        hotKeys: ["s", "/"],    // 快捷键
+      },
+    },
+
+    // ==================== 其它功能 ====================
     darkmode: "switch",
     lastUpdated: true,
     lastUpdatedText: "最后更新",
@@ -104,19 +108,5 @@ export default defineUserConfig({
     docsBranch: "main",
     contributors: true,
     contributorsText: "贡献者",
-
-    // 代码复制
-    plugins: {
-      copyCode: { showInMobile: true },
-
-      
-    searchPro: {
-      // 可选配置
-      indexContent: true,     // 索引正文内容
-      autoSuggestions: true,  // 自动建议
-      hotKeys: ["s", "/"],    // 快捷键
-    }
-    
-    },
   }),
 });

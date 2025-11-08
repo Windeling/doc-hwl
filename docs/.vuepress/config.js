@@ -8,7 +8,6 @@ export default defineUserConfig({
   title: "Windeling 文档（beta）",
   description: "属于「黄文林」的知识库、清单和说明书",
 
-  // 必须显式指定 bundler
   bundler: viteBundler(),
 
   head: [
@@ -16,15 +15,10 @@ export default defineUserConfig({
     ["meta", { name: "keywords", content: "文档,知识库,黄文林" }],
   ],
 
-  // 这里 **不再** 使用 @vuepress/plugin-search
-  // plugins: [],   // 如果以后需要其它官方插件再打开
-
   theme: hopeTheme({
-    // 作者、logo
     author: "黄文林",
     logo: "https://vuejs.press/images/hero.png",
 
-    // 导航栏
     navbar: [
       { text: "首页", link: "/" },
       {
@@ -51,24 +45,20 @@ export default defineUserConfig({
       },
     ],
 
-    // ==================== 侧边栏 ====================
-    sidebar: {
-      // 首页：可折叠的文件结构
-      "/": [
-        {
-          text: "Windeling 文档",
-          collapsible: true,
-          collapsed: true,
-          children: "structure",
-        },
-      ],
-
-      // 其它路径：在文章页面显示 H2/H3 标题目录
-      "/chat/": "headers",
-      "/doc/": "headers",
-      "/study/": "headers",
-      "/photo/": "headers",
-    },
+    // ==================== 侧边栏：数组格式 ====================
+    sidebar: [
+      {
+        path: "/",
+        text: "Windeling 文档",
+        collapsible: true,
+        collapsed: true,
+        children: "structure",
+      },
+      { path: "/chat/", children: "headers" },
+      { path: "/doc/", children: "headers" },
+      { path: "/study/", children: "headers" },
+      { path: "/photo/", children: "headers" },
+    ],
 
     headerDepth: 3,
     sidebarIcon: true,
@@ -79,23 +69,18 @@ export default defineUserConfig({
       tasklist: true,
       sup: true,
       sub: true,
-      imageLazyload: true,
     },
 
-    // ==================== 插件（内置） ====================
+    // ==================== 插件 ====================
     plugins: {
-      // 代码复制
       copyCode: { showInMobile: true },
-
-      // 更强大的全文搜索（searchPro）
-      searchPro: {
-        indexContent: true,     // 索引正文
-        autoSuggestions: true,  // 实时建议
-        hotKeys: ["s", "/"],    // 快捷键
+      slimsearch: {
+        indexContent: true,
+        hotKeys: ["s", "/"],
       },
     },
 
-    // ==================== 其它功能 ====================
+    // ==================== 其它 ====================
     darkmode: "switch",
     lastUpdated: true,
     lastUpdatedText: "最后更新",

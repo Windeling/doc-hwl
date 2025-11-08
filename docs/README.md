@@ -4,7 +4,7 @@ title: Home
 heroImage: https://vuejs.press/images/hero.png
 actions:
   - text: 快速开始
-    link: /get-started/get-started.html
+    link: /get-started/
     type: primary
 
   - text: 详细了解

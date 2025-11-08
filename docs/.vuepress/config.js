@@ -158,50 +158,19 @@ export default defineUserConfig({
       },
 
       photoSwipe: {
-  // 放大所有正文图 + 表情包，标题里的别乱放大
-  selector: ".theme-default-content :not(a) > img:not(.no-zoom)",
-
-  // 300ms 延迟防手抖
-  delay: 300,
-
-  // 放大到 4K 都不糊
-  zoom: { max: 10 },
-
-  // 右键菜单：下载 + 复制链接
-  download: true,
-  copyToClipboard: true,
-
-  // 分享按钮（关了不占位）
-  shareEl: false,
-
-  // 暗黑模式自动黑底
-  bgOpacity: 0.95,
-  dark: "auto",
-
-  // 手机端：双指缩放 + 左右滑
-  wheelToZoom: true,
-  pinchToClose: true,
-  tapToClose: true,
-  closeOnVerticalDrag: true,
-
-  // 长图自动滚动
-  loop: false,
-  spacing: 0.1,
-
-  // 左下角显示 3/24
-  showCounter: true,
-
-  // 预加载前后各 2 张
-  preload: [2, 2],
-
-  // PhotoSwipe 原生选项（想玩啥玩啥）
-  options: {
-    arrowPrev: "←",
-    arrowNext: "→",
-    zoomTitle: "双指放大",
-    closeTitle: "点我关",
-  },
-},
+      selector: ".theme-default-content :not(a) > img:not(.no-zoom)",
+      delay: 300,
+      download: true,
+      copyToClipboard: true,
+      shareEl: false,
+      dark: "auto",
+      wheelToZoom: true,
+      pinchToClose: true,
+      tapToClose: true,
+      closeOnVerticalDrag: true,
+      showCounter: true,
+      preload: [2, 2],
+    },
 
       copyright: {
       global: true,

@@ -13,6 +13,9 @@ export default defineUserConfig({
     ["meta", { name: "keywords", content: "文档,知识库,黄文林" }],
   ],
   plugins: [
+     watermarkPlugin({
+      enabled: true,
+    }),
     appendDatePlugin({
       enable: true,
       format: "YYYY-MM-DD HH:mm",
@@ -329,6 +332,8 @@ export default defineUserConfig({
       spoiler: true,
     },
     plugins: {
+
+      
       icon: {
       // 关键词: "iconify", "fontawesome", "fontawesome-with-brands"
       assets: "fontawesome",

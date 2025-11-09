@@ -3,6 +3,7 @@ import { hopeTheme } from "vuepress-theme-hope";
 import { defineUserConfig } from "vuepress";
 import { viteBundler } from "@vuepress/bundler-vite";
 import { appendDatePlugin } from '@vuepress/plugin-append-date';
+
 export default defineUserConfig({
   lang: "zh-CN",
   title: "Windelingの間 文档",
@@ -104,6 +105,127 @@ export default defineUserConfig({
         // 可以在这里配置具体的加密规则
         // 例如："/guide/encrypt.html": ["1234"],
       },
+    },
+    markdown: {
+      imgMark: true,
+      math: {
+        engine: "katex",
+        delimiters: "dollars",
+        katex: {
+          strict: false,
+          output: 'html',
+        }
+      },
+      codeTabs: true,
+      tabs: true,
+      tasklist: {
+        label: true,
+      },
+      linkify: true,
+      include: true,
+      align: true,
+      attrs: true,
+      mark: true,
+      sup: true,
+      sub: true,
+      stylize: [
+        {
+          matcher: '推荐',
+          replacer: ({ tag }) => {
+            if (tag === 'em') {
+              return {
+                tag: 'Badge',
+                attrs: { type: 'tip' },
+                content: '推荐',
+              };
+            }
+          },
+        },
+        {
+          matcher: '应当',
+          replacer: ({ tag }) => {
+            if (tag === 'em') {
+              return {
+                tag: 'Badge',
+                attrs: { type: 'tip' },
+                content: '推荐',
+              };
+            }
+          },
+        },
+        {
+          matcher: '必须',
+          replacer: ({ tag }) => {
+            if (tag === 'em') {
+              return {
+                tag: 'Badge',
+                attrs: { type: 'danger' },
+                content: '必须',
+              };
+            }
+          },
+        },
+        {
+          matcher: '警告',
+          replacer: ({ tag }) => {
+            if (tag === 'em') {
+              return {
+                tag: 'Badge',
+                attrs: { type: 'danger' },
+                content: '警告',
+              };
+            }
+          },
+        },
+        {
+          matcher: '注意',
+          replacer: ({ tag }) => {
+            if (tag === 'em') {
+              return {
+                tag: 'Badge',
+                attrs: { type: 'warning' },
+                content: '注意',
+              };
+            }
+          },
+        },
+        {
+          matcher: /n't$/,
+          replacer: ({ tag, attrs, content }) => {
+            if (tag === 'em') {
+              return {
+                tag: 'span',
+                attrs: { ...attrs, style: 'color: red;' },
+                content,
+              };
+            }
+          },
+        },
+        {
+          matcher: /==(.+?)==/,
+          replacer: ({ content }) => ({
+            tag: 'mark',
+            attrs: { style: 'background: rgba(255, 211, 17, 1);' },
+            content: content.slice(2, -2),
+          }),
+        },
+      ],
+      chartjs: true,
+      mermaid: true,
+      demo: true,
+      footnotes: true,
+      containers: true,
+      lazyload: true,
+      imgSize: true,
+      figure: true,
+      alert: true,
+      code: {
+        lineNumbers: 10,
+        highlightLines: true,
+      },
+      vpre: true,
+      checkLinks: true,
+      obsidianImgSize: true,
     },
     plugins: {
       icon: {
@@ -209,150 +331,6 @@ export default defineUserConfig({
           showOnce: true,
         },
       ],
-      // Markdown 增强配置（修正名称并移动到 mdEnhance）
-      mdEnhance: {
-        // 任务列表
-        tasklist: {
-          label: true,
-        },
-        // 脚注
-        footnotes: true,
-        // 上下标
-        sup: true,
-        sub: true,
-        // 自动链接
-        linkify: true,
-        // 自定义容器
-        containers: true,
-        // 表格 (默认启用，GFM)
-        // 代码标签页
-        codetabs: true,
-        // 代码演示
-        demo: true,
-        // 图片懒加载
-        lazyload: true,
-        // 图片大小
-        imgSize: true,
-        // 图片标记
-        imgMark: true,
-        // 图片标题/图注
-        figure: true,
-        // 提示框 (GFM alerts)
-        alert: true,
-        // 对齐支持
-        align: true,
-        // 标记支持
-        mark: true,
-        // 导入支持
-        include: true,
-        // 属性支持
-        attrs: true,
-        // 选项卡
-        tabs: true,
-        // 代码块行号
-        code: {
-          lineNumbers: 10,
-          highlightLines: true,
-        },
-        // VPre 容器
-        vpre: true,
-        // 链接检查
-        checkLinks: true,
-        // 数学公式 (使用 KaTeX)
-        katex: {
-          strict: false,
-          output: 'html',
-        },
-        // 图表支持
-        chart: true,
-        // Mermaid 图表 (替换 flowchart)
-        mermaid: true,
-        // Obsidian 图片大小
-        obsidianImgSize: true,
-        // 标记增强
-        stylize: [
-          {
-            matcher: '推荐',
-            replacer: ({ tag }) => {
-              if (tag === 'em') {
-                return {
-                  tag: 'Badge',
-                  attrs: { type: 'tip' },
-                  content: '推荐',
-                };
-              }
-            },
-          },
-          {
-            matcher: '应当',
-            replacer: ({ tag }) => {
-              if (tag === 'em') {
-                return {
-                  tag: 'Badge',
-                  attrs: { type: 'tip' },
-                  content: '推荐',
-                };
-              }
-            },
-          },
-          {
-            matcher: '必须',
-            replacer: ({ tag }) => {
-              if (tag === 'em') {
-                return {
-                  tag: 'Badge',
-                  attrs: { type: 'danger' },
-                  content: '必须',
-                };
-              }
-            },
-          },
-          {
-            matcher: '警告',
-            replacer: ({ tag }) => {
-              if (tag === 'em') {
-                return {
-                  tag: 'Badge',
-                  attrs: { type: 'danger' },
-                  content: '警告',
-                };
-              }
-            },
-          },
-          {
-            matcher: '注意',
-            replacer: ({ tag }) => {
-              if (tag === 'em') {
-                return {
-                  tag: 'Badge',
-                  attrs: { type: 'warning' },
-                  content: '注意',
-                };
-              }
-            },
-          },
-          {
-            matcher: /n't$/,
-            replacer: ({ tag, attrs, content }) => {
-              if (tag === 'em') {
-                return {
-                  tag: 'span',
-                  attrs: { ...attrs, style: 'color: red;' },
-                  content,
-                };
-              }
-            },
-          },
-          {
-            matcher: /==(.+?)==/,
-            replacer: ({ content }) => ({
-              tag: 'mark',
-              attrs: { style: 'background: rgba(255, 211, 17, 1);' },
-              content: content.slice(2, -2),
-            }),
-          },
-        ],
-      },
     },
   }),
 });

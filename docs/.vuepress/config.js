@@ -3,7 +3,6 @@ import { hopeTheme } from "vuepress-theme-hope";
 import { defineUserConfig } from "vuepress";
 import { viteBundler } from "@vuepress/bundler-vite";
 import { appendDatePlugin } from '@vuepress/plugin-append-date';
-import { hopeTheme } from "vuepress-theme-hope";
 
 export default defineUserConfig({
   lang: "zh-CN",

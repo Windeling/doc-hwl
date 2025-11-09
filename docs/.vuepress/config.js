@@ -3,7 +3,6 @@ import { hopeTheme } from "vuepress-theme-hope";
 import { defineUserConfig } from "vuepress";
 import { viteBundler } from "@vuepress/bundler-vite";
 import { appendDatePlugin } from '@vuepress/plugin-append-date';
-
 export default defineUserConfig({
   lang: "zh-CN",
   title: "Windelingの間 文档",
@@ -88,7 +87,6 @@ export default defineUserConfig({
     contributors: true,
     contributorsText: "贡献者",
     changelog: true,
-
     // 页面信息配置（从 markdown 中移动到这里）
     pageInfo: [
       'Author',
@@ -100,217 +98,12 @@ export default defineUserConfig({
       'ReadingTime',
       'Word',
     ],
-
     // 文章加密配置（从 markdown 中移动到这里）
     encrypt: {
       config: {
         // 可以在这里配置具体的加密规则
         // 例如："/guide/encrypt.html": ["1234"],
       },
-    },
-
-    // 在这里配置所有 markdown 增强功能
-    markdown: {
-      // GFM 功能
-      gfm: true,
-      
-      // 任务列表
-      tasklist: {
-        disabled: false,
-        label: true,
-        // 更多任务列表选项
-      },
-      
-      // 脚注
-      footnote: true,
-      
-      // 上下标
-      sup: true,
-      sub: true,
-      
-      // 自动链接
-      autolink: true,
-      
-      // 自定义容器
-      container: true,
-      
-      // 组件
-      component: true,
-      
-      // 表格
-      table: true,
-      
-      // 隐藏内容
-      spoiler: true,
-      
-      // 代码标签页
-      codeTabs: true,
-      
-      // 代码演示
-      demo: true,
-      
-      // 图片增强
-      image: {
-        lazy: true,
-        size: true,
-        mark: true,
-        title: true,
-      },
-      
-      // 图片标记
-      imageMark: true,
-      
-      // 图片大小
-      imageSize: true,
-      
-      // 提示框
-      hint: true,
-      
-      // 对齐支持
-      align: true,
-      
-      // 标记支持
-      mark: true,
-      
-      // 导入支持
-      include: true,
-      
-      // 属性支持
-      attrs: true,
-      
-      // 选项卡
-      tabs: true,
-      
-      // 代码组
-      codeGroup: true,
-      
-      // 代码块行号
-      lineNumbers: true,
-      
-      // 代码块高亮行
-      highlightLines: true,
-      
-      // VPre 容器
-      vPre: true,
-      
-      // 链接检查
-      linkCheck: true,
-      
-      // 数学公式
-      math: {
-        type: "katex",
-        delimiters: "dollars",
-        katex: {
-          strict: false,
-          output: 'html',
-        }
-      },
-      
-      // 图表支持
-      chart: true,
-      
-      // 流程图
-      flowchart: true,
-      
-      // Mermaid 图表
-      mermaid: true,
-      
-      // 图片相关
-      figure: true,
-      imgLazyload: true,
-      imgMark: true,
-      imgSize: true,
-      obsidianImgSize: true,
-      
-      // 代码块高亮
-      code: {
-        lineNumbers: 10, // 超过10行显示行号
-        highlightLines: true,
-      },
-      
-      // 标记增强
-      stylize: [
-        {
-          matcher: '推荐',
-          replacer: ({ tag }) => {
-            if (tag === 'em') {
-              return {
-                tag: 'Badge',
-                attrs: { type: 'tip' },
-                content: '推荐',
-              };
-            }
-          },
-        },
-        {
-          matcher: '应当',
-          replacer: ({ tag }) => {
-            if (tag === 'em') {
-              return {
-                tag: 'Badge',
-                attrs: { type: 'tip' },
-                content: '推荐',
-              };
-            }
-          },
-        },
-        {
-          matcher: '必须',
-          replacer: ({ tag }) => {
-            if (tag === 'em') {
-              return {
-                tag: 'Badge',
-                attrs: { type: 'danger' },
-                content: '必须',
-              };
-            }
-          },
-        },
-        {
-          matcher: '警告',
-          replacer: ({ tag }) => {
-            if (tag === 'em') {
-              return {
-                tag: 'Badge',
-                attrs: { type: 'danger' },
-                content: '警告',
-              };
-            }
-          },
-        },
-        {
-          matcher: '注意',
-          replacer: ({ tag }) => {
-            if (tag === 'em') {
-              return {
-                tag: 'Badge',
-                attrs: { type: 'warning' },
-                content: '注意',
-              };
-            }
-          },
-        },
-        {
-          matcher: /n't$/,
-          replacer: ({ tag, attrs, content }) => {
-            if (tag === 'em') {
-              return {
-                tag: 'span',
-                attrs: { ...attrs, style: 'color: red;' },
-                content,
-              };
-            }
-          },
-        },
-        {
-          matcher: /==(.+?)==/,
-          replacer: ({ content }) => ({
-            tag: 'mark',
-            attrs: { style: 'background: rgba(255, 211, 17, 1);' },
-            content: content.slice(2, -2),
-          }),
-        },
-      ],
     },
     plugins: {
       icon: {
@@ -321,12 +114,12 @@ export default defineUserConfig({
       slimsearch: true,
       copyCode: { showInMobile: true },
       search: false,
-      
+     
       // 阅读时间（从 markdown 中移动到这里）
       readingTime: {
         wordPerMinute: 300,
       },
-      
+     
       // 幻灯片（从 markdown 中移动到这里）
       presentation: {
         plugins: [
@@ -337,7 +130,7 @@ export default defineUserConfig({
           'zoom',
         ],
       },
-      
+     
       // 评论
       comment: {
         provider: 'Waline',
@@ -416,6 +209,150 @@ export default defineUserConfig({
           showOnce: true,
         },
       ],
+      // Markdown 增强配置（修正名称并移动到 mdEnhance）
+      mdEnhance: {
+        // 任务列表
+        tasklist: {
+          label: true,
+        },
+        // 脚注
+        footnotes: true,
+        // 上下标
+        sup: true,
+        sub: true,
+        // 自动链接
+        linkify: true,
+        // 自定义容器
+        containers: true,
+        // 表格 (默认启用，GFM)
+        // 代码标签页
+        codetabs: true,
+        // 代码演示
+        demo: true,
+        // 图片懒加载
+        lazyload: true,
+        // 图片大小
+        imgSize: true,
+        // 图片标记
+        imgMark: true,
+        // 图片标题/图注
+        figure: true,
+        // 提示框 (GFM alerts)
+        alert: true,
+        // 对齐支持
+        align: true,
+        // 标记支持
+        mark: true,
+        // 导入支持
+        include: true,
+        // 属性支持
+        attrs: true,
+        // 选项卡
+        tabs: true,
+        // 代码块行号
+        code: {
+          lineNumbers: 10,
+          highlightLines: true,
+        },
+        // VPre 容器
+        vpre: true,
+        // 链接检查
+        checkLinks: true,
+        // 数学公式 (使用 KaTeX)
+        katex: {
+          strict: false,
+          output: 'html',
+        },
+        // 图表支持
+        chart: true,
+        // Mermaid 图表 (替换 flowchart)
+        mermaid: true,
+        // Obsidian 图片大小
+        obsidianImgSize: true,
+        // 标记增强
+        stylize: [
+          {
+            matcher: '推荐',
+            replacer: ({ tag }) => {
+              if (tag === 'em') {
+                return {
+                  tag: 'Badge',
+                  attrs: { type: 'tip' },
+                  content: '推荐',
+                };
+              }
+            },
+          },
+          {
+            matcher: '应当',
+            replacer: ({ tag }) => {
+              if (tag === 'em') {
+                return {
+                  tag: 'Badge',
+                  attrs: { type: 'tip' },
+                  content: '推荐',
+                };
+              }
+            },
+          },
+          {
+            matcher: '必须',
+            replacer: ({ tag }) => {
+              if (tag === 'em') {
+                return {
+                  tag: 'Badge',
+                  attrs: { type: 'danger' },
+                  content: '必须',
+                };
+              }
+            },
+          },
+          {
+            matcher: '警告',
+            replacer: ({ tag }) => {
+              if (tag === 'em') {
+                return {
+                  tag: 'Badge',
+                  attrs: { type: 'danger' },
+                  content: '警告',
+                };
+              }
+            },
+          },
+          {
+            matcher: '注意',
+            replacer: ({ tag }) => {
+              if (tag === 'em') {
+                return {
+                  tag: 'Badge',
+                  attrs: { type: 'warning' },
+                  content: '注意',
+                };
+              }
+            },
+          },
+          {
+            matcher: /n't$/,
+            replacer: ({ tag, attrs, content }) => {
+              if (tag === 'em') {
+                return {
+                  tag: 'span',
+                  attrs: { ...attrs, style: 'color: red;' },
+                  content,
+                };
+              }
+            },
+          },
+          {
+            matcher: /==(.+?)==/,
+            replacer: ({ content }) => ({
+              tag: 'mark',
+              attrs: { style: 'background: rgba(255, 211, 17, 1);' },
+              content: content.slice(2, -2),
+            }),
+          },
+        ],
+      },
     },
   }),
 });

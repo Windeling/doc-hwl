@@ -194,7 +194,7 @@ export default defineUserConfig({
   // 页面信息
   pageInfo: [
     'Author',
-    'visitor',
+    'PageView',
     'Original',
     'Date',
     'Category',

@@ -24,6 +24,7 @@
     "@vuepress/plugin-revealjs": "^2.0.0-rc.118",
     "@vuepress/plugin-shiki": "^2.0.0-rc.118",
     "@vuepress/plugin-slimsearch": "^2.0.0-rc.118",
+    "@vuepress/plugin-watermark": "^2.0.0-rc.118",
     "@waline/client": "^3.7.1",
     "echarts": "^6.0.0",
     "katex": "^0.16.25",

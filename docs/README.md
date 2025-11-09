@@ -3,7 +3,7 @@ home: true
 title: 主页
 icon: home
 heroText: Windelingの間 文档
-tagline: 属于「黄文林」的知识库、清单和文档
+tagline: 属于「黄文林」的知识库、清单和说明书
 heroStyle:
   min-height: 600px
 bgImage: https://theme-hope-assets.vuejs.press/bg/6-light.svg

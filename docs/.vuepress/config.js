@@ -3,6 +3,7 @@ import { hopeTheme } from "vuepress-theme-hope";
 import { defineUserConfig } from "vuepress";
 import { viteBundler } from "@vuepress/bundler-vite";
 import { appendDatePlugin } from '@vuepress/plugin-append-date';
+
 export default defineUserConfig({
   lang: "zh-CN",
   title: "Windelingの間 文档",
@@ -13,9 +14,6 @@ export default defineUserConfig({
     ["meta", { name: "keywords", content: "文档,知识库,黄文林" }],
   ],
   plugins: [
-     watermarkPlugin({
-      enabled: true,
-    }),
     appendDatePlugin({
       enable: true,
       format: "YYYY-MM-DD HH:mm",
@@ -89,7 +87,6 @@ export default defineUserConfig({
     docsBranch: "main",
     contributors: true,
     contributorsText: "贡献者",
-    lastUpdated: true,
     changelog: true,
 
     // 在这里配置所有 markdown 增强功能
@@ -180,7 +177,6 @@ export default defineUserConfig({
   linkCheck: true,
   
   // 数学公式
-  math: true,
   
   // 图表支持
   chart: true,
@@ -329,7 +325,6 @@ export default defineUserConfig({
       // 新增：启用 tab 和 spoiler 功能
     },
     plugins: {
-
       
       icon: {
       // 关键词: "iconify", "fontawesome", "fontawesome-with-brands"
@@ -403,7 +398,7 @@ export default defineUserConfig({
         {
           path: "/",
           title: "更新啦！",
-          content: "所有数据库汇总更新",
+          content: "汇总更新",
           actions: [
             { text: "立刻看新文", link: "/chat/life/" },
             { text: "懒得鸟我", type: "default" }
@@ -415,7 +410,7 @@ export default defineUserConfig({
         {
           match: /^\/photo\//,
           title: "摄影专区提醒",
-          content: "复制走请保留水印，不然天打雷劈！",
+          content: "复制走请保留注明来源。",
           actions: [{ text: "我知道啦", type: "primary" }],
           fullscreen: true,
           confirm: true,

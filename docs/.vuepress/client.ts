@@ -15,11 +15,11 @@ export default defineClientConfig({
     // 配置运行时间显示
     setupRunningTimeFooter(
       // 开始计算的日期（可以是字符串或 Date 对象）
-      new Date("2025-11-09"), // 请修改为您网站的实际上线日期
+      new Date("2025-11-08"), // 请修改为您网站的实际上线日期
       
       // 多语言配置
       {
-        "/": "Running time: :day days :hour hours :minute minutes :second seconds",
+        "/": " <br> Running time: :day days :hour hours :minute minutes :second seconds",
         "/zh/": "已运行 :day 天 :hour 小时 :minute 分钟 :second 秒",
         // 可以添加更多语言...
       },

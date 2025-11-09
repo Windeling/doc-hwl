@@ -243,7 +243,6 @@ export default defineUserConfig({
         }
       },
       // 图表
-      chart: true,
       // 标记增强
       stylize: [
         {

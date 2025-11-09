@@ -328,8 +328,6 @@ export default defineUserConfig({
         },
       ],
       // 新增：启用 tab 和 spoiler 功能
-      tabs: true,
-      spoiler: true,
     },
     plugins: {
 
